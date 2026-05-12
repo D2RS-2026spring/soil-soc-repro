@@ -1,0 +1,2844 @@
+
+  
+    
+      uid=EDI,o=EDI,dc=edirepository,dc=org
+      all
+    
+    
+      uid=edi,o=EDI,dc=edirepository,dc=org
+      all
+    
+    
+      public
+      read
+    
+  
+  
+    doi:10.6073/pasta/2284825ecb8460f056ae5b0e7d355cc8
+    Biogeochemical and 13C NMR data from NEON surface mineral soils
+    
+      Steven Hall
+      Iowa State University
+      stevenjh@iastate.edu
+      https://orcid.org/0000-0002-7841-2019
+    
+    
+      Chenglong Ye
+      Iowa State University
+      chenglongye@hotmail.com
+      https://orcid.org/0000-0002-7157-5034
+    
+    
+      Samantha Weintraub
+      NEON/Battelle
+      sweintraub@battelleecology.org
+      https://orcid.org/0000-0003-4789-5086
+    
+    
+      William Hockaday
+      Baylor University
+      william_hockaday@baylor.edu
+      https://orcid.org/0000-0002-0501-0393
+    
+    2020-07-21
+    
+      To understand controls on soil organic matter chemical composition across North America, we collected 13C NMR spectra and conducted and synthesized additional biogeochemical measurements from NEON Megapit soil samples as well as additional samples (total n = 42). This dataset supports the findings described in the associated manuscript by Hall, Ye et al. (2020).
+    
+    
+      Macrosystems Biology
+      NEON
+      Nuclear Magnetic Resonance
+      NMR
+      Soil
+      Soil Organic Matter
+      Biogeochemistry
+      Soil Horizon
+      Soil Carbon
+      Lignin
+      Black carbon
+      Char
+      Protein
+      Carbohydrate
+      Lipid
+      Fungi
+      Bacteria
+    
+    
+      This information is released under the Creative Commons license - Attribution - CC BY (https://creativecommons.org/licenses/by/4.0/). The consumer of these data (\"Data User\" herein) is required to cite it appropriately in any publication that results from its use. The Data User should realize that these data may be actively used by others for ongoing research and that coordination may be necessary to prevent duplicate publication. The Data User is urged to contact the authors of these data if any questions about methodology or results occur. Where appropriate, the Data User is encouraged to consider collaboration or co-authorship with the authors. The Data User should realize that misinterpretation of data may occur if used out of context of the original study. While substantial efforts are made to ensure the accuracy of data and associated documentation, complete accuracy of data sets cannot be guaranteed. All data are made available \"as is.\" The Data User should be aware, however, that data are updated periodically and it is the responsibility of the Data User to check for new versions of the data. The data authors and the repository where these data were obtained shall not be liable for damages resulting from any use or misinterpretation of the data. Thank you.
+
+    
+    
+      
+        North America
+        
+          -150
+          -65
+          69
+          18
+        
+      
+      
+        
+          
+            2018-09-01
+          
+          
+            2019-12-31
+          
+        
+      
+    
+    
+      completed
+    
+    
+      Steven Hall
+      Iowa State University
+      stevenjh@iastate.edu
+      https://orcid.org/0000-0002-7841-2019
+    
+    
+      
+        
+          We analyzed the molecular SOC composition of surface mineral soil samples spanning 32 sites in the NEON Megapit archive, along with 10 additional soils which were selected to encompass additional diversity in biogeochemical characteristics (Supplemental Table 1). This table and additional tables referenced below are reported in the manuscript associated with this dataset (Hall, Ye, et al., Accepted, Nature Geoscience). Briefly, in the dominant soil and vegetation type at each NEON terrestrial site, a soil profile was characterized and sampled by horizon with the help of US Department of Agriculture Natural Resource Conservation (NRCS) staff and archived by NEON 1-3. We requested subsamples of A horizon material from each site in the Megapit archive that was available in September 2019. The Gellisols had extensive organic (O) horizons, such that we requested material from the mineral horizon closest to the surface (described as Bg/Oajj, A/Cjj, and Bg at BONA, HEAL, and TOOL, respectively; Supplemental Table 1). The 10 non-NEON samples analyzed here were each collected from 0–10 cm depth with a clean shovel after removing any litter or O horizon material. All soils were air dried to constant mass and sieved to 2 mm. Visible root fragments were removed with tweezers and soils were finely ground with a mortar and pestle prior to subsequent analyses.
+          13C CPMAS NMR analyses and sample preparation All 42 samples were prepared for NMR analyses, allowing a comparative characterization of organic C molecular composition. In order to increase the NMR sensitivity and remove paramagnetic materials, soils were pre-treated with hydrochloric acid (HCl, 10% wt.) and hydrofluoric acid (HF, 10%, wt.) to remove any calcium carbonate and mineral phases, respectively. Briefly, 2–3 g of finely ground soil was weighed into a 50 mL sealed polyethylene centrifugation tube, saturated with 30 mL HCl, and allowed to settle for 30 min. After centrifugation and discarding HCl, the remaining slurry was then shaken with 40 ml of mixed HF (10% wt.) and HCl (10% wt.) for 8 h, and subsequently centrifuged. The supernatant was removed and discarded appropriately. After repeating the procedure four times, each sample was washed with distilled water three times and dried at 50 oC under a stream of dinitrogen gas.
+          Solid-state 13C CP-MAS and 13C DP-MAS NMR spectra were recorded at room temperature (23 degreeC) using a 300 MHz Bruker AVANCE III NMR spectrometer equipped with a 4 mm magic angle spinning (MAS) probe (Bruker BioSpin, Billerica, MA) at Baylor University (Waco, TX). The 60–130 mg HF-treated sample was placed in a zirconium rotor with a diameter of 4 mm and Kel-F caps to maximize the C mass and signal intensity. A MAS rate of 12 kHz was used for all NMR measurements. Cross polarization (CP) experiments used a ramped-amplitude (50% to 100%) contact pulse and rotor synchronized Hahn echo 4. The contact time and recycle delay were set to 2 ms and 1.2 s, respectively, and composite pulse proton decoupling was applied during signal acquisition. Direct polarization (DP) 13C spectra were acquired with a 90-degree excitation pulse and rotor-synchronized Hahn echo 5, with a recycle delay of 180 s. Glycine was used as an external standard for setting pulse angles, chemical shift and Hartman-Hahn matching conditions. DPMAS spectra were obtained for 11 HF-treated soil samples as a means against which to assess relative quantitation bias in CPMAS NMR data 6. These samples were selected to span a broad range of biogeochemical diversity (nine soil orders; Supplemental Table 1) and contained sufficient SOC ( greater than  2.9% C in the original samples) to enable timely analysis by DPMAS.
+          CPMAS spectra for HF-treated samples were acquired with more than 6000 scans. To assess potential impacts of HF treatment on SOC composition, 11 untreated samples with relatively high SOC concentration ( greater than  6%) were also selected for NMR analysis (this set differed slightly from the CPMAS/DPMAS comparison given the differing selection criteria). These samples included six soil orders and spanned a broad range of paramagnetic element content (14–58 mg Fe g-1). Spectra for these untreated samples were recorded using the same operation conditions of HF-treated samples and were acquired with more than 44000 scans. After baseline correction, quantiﬁcation was performed by dividing the spectra into seven chemical shift regions: 0–45 ppm, 45–60 ppm, 60–95 ppm, 95–110 ppm, 110–145 ppm, 145–165 ppm and 165–215 ppm, assigned to alkyl C, N-alkyl + methoxyl C, O-alkyl C, Di-O-alkyl C, aromatic C, phenolic C, amide + carbonyl C, respectively. Subsequently, a molecular mixing model was applied to the seven integrated spectra regions, to estimate the relative abundances of six molecular SOC constituents (carbohydrate, protein, lignin, lipid, carbonyl and char) 7. The elemental concentrations of C and N were measured on the HF-treated samples by combustion/elemental analysis at Baylor University (Costech 4010, Valencia, CA) and were used as additional constraints on the molecular mixing model solutions 7.
+          Biogeochemical analyses Megapit soil samples and vegetation in proximity to the soil pit were subjected to numerous physical and chemical analyses 8. Here, we utilized measurements of total elemental content and particle size from the Megapit samples. We also used measurements of the copy number of functional genes from bacteria/archaea (16S) and fungi (ITS) calculated by quantitative polymerase chain reaction (qPCR), which were conducted on separate fresh soil samples collected in the vicinity of each sampled Megapit profile 8. Briefly, these soils were flash frozen in the field on dry ice and shipped to an analytical facility for DNA extraction and amplification. Soil samples for qPCR analysis were collected periodically (approximately three times per year) from each site from 0–30 cm depth, and cores were visually separated according to organic and mineral horizons; only samples from mineral soil were used here. We selected samples from plots in proximity to each Megapit (i.e., within several hundred m; denoted as Tower plots in NEON terminology) and averaged the mean 16S and ITS abundance for each site based on the 2016–2018 data. Fine root biomass was measured by depth in three pit profiles within the Megapit and sorted into live/dead classes for fine ( less than  2 mm or  less than  4 mm, depending on the site) and coarse diameter classes. Here, we denoted the combined  less than  2 mm and  less than  4 mm fractions as fine roots for subsequent analyses. Roots were dried, weighed, and combusted for analysis of carbon (C) and nitrogen (N) content. We averaged root data from 0–30 cm depth for use in subsequent analyses. No NEON root data were available from TOOL, so we used previous published data from the same site 9. Samples for foliar and/or litter chemistry were available from a subset of the NEON sites (15 and 16 sites, respectively), as these are collected from each site on a five-year rolling schedule. Foliar samples represented clips of bulk herbaceous samples from the plant community. Litter samples included debris from trees and shrubs. We used measurements of foliar and litter C:N and a proxy for lignin content (acid-unhydrolyzable residue) 8. No root or microbial or litter chemistry data were available from the non-NEON samples from which we collected 13C NMR spectra.
+          We conducted several additional soil extractions of all samples to quantify reactive metals. Subsamples were extracted in parallel with sodium dithionite (1:150 ratio of soil:solution) to quantify pedogenic iron (denoted Fed) and ammonium oxalate (1:60 ratio of soil:solution) to quantify Fe and aluminum in short-range-ordered phases and organo-metal complexes (termed Feo and Alo). The concentration of crystalline Fe minerals was then calculated as the difference between Fed and Feo (Fed-o). Subsamples were also sequentially extracted with deionized water and sodium sulfate (1:150 ratio of soil:solution). The calcium and magnesium concentration of the sodium sulfate extraction (termed Cas + Mgs), which followed the water extraction, was interpreted as a proxy for Ca and Mg that may have participated in divalent cation bridging between clays and organic matter 10. All metals were analyzed by inductively coupled plasma optical emission spectroscopy at Iowa State University (ICP-OES; Perkin Elmer Optima 5300 DV, Waltham Massachusetts). Mean annual precipitation and temperature data were estimated for each NEON site using previously synthesized data 11. Potential evapotranspiration (PET) data were extracted from a global 1-km resolution mean annual evapotranspiration dataset from 2000-2014 12.
+          References
+          1.	Ayres, E., et al. NEON Field and Lab Procedure and Protocol: TIS Soil Pit Sampling Protocol. NEON.DOC.001307. https://data.neonscience.org/data-products/DP1.00097.001 (2017).
+          2.	Ayres E., & Durden, D. NEON Field and Lab Procedure and Protocol: TIS Soil Archiving. NEON.DOC.000325. https://data.neonscience.org/data-products/DP1.00097.001 (2017).
+          3.	Ayres, E. NEON procedure and protocol: producing TIS soil archive subsamples for users. NEON.DOC.001306. https://data.neonscience.org/data-products/DP1.00097.001 (2017).
+          4.	Harbison, G. S. et al. High-resolution carbon-13 NMR of retinal derivatives in the solid state. J. Am. Chem. Soc. 107, 4809–4816 (1985).
+          5.	Mao, J.-D. et al. Quantitative characterization of humic substances by solid-state carbon-13 nuclear magnetic resonance. Soil Sci. Soc. Am. J. 64, 873–884 (2000).
+          6.	Longbottom, T. L. & Hockaday, W. C. Molecular and isotopic composition of modern soils derived from kerogen-rich bedrock and implications for the global C cycle. Biogeochemistry 143, 239–255 (2019).
+          7.	Baldock, J. A., Masiello, C. A., Gelinas, Y., & Hedges, J. I. Cycling and composition of organic matter in terrestrial and marine ecosystems. Marine Chemistry, 92(1-4), 39-64 (2004).
+          8.	NEON (National Ecological Observatory Network). DP1.00096.001, DP1.10066.001, DP1.10102.001, DP1.10109.001 (accessed September 1, 2019), DP1.10026.001, DP1.10033.001, DP1.10031.001 (accessed May 15, 2020). http://data.neonscience.org.
+          9.	Sullivan, P. F. et al. Climate and species affect fine root production with long-term fertilization in acidic tussock tundra near Toolik Lake, Alaska. Oecologia 153, 643–652 (2007).
+          10.	 Ye, C. et al. Reconciling multiple impacts of nitrogen enrichment on soil carbon: plant, microbial and geochemical controls. Ecol. Lett. 21, 1162–1173 (2018).
+          11.	SanClements, M. et al. Collaborating with NEON. BioScience 70, 107 - 107 (2020).
+          12.	Mu, Q., Zhao, M. & Running, S. W. Improvements to a MODIS global terrestrial evapotranspiration algorithm (MOD16 method). Remote Sens. Environ. 115, 1781–1800 (2011).
+          
+        
+      
+    
+    
+      Collaborative Research: MSB-ECA: Resolving controls on lignin decomposition at the continental scale to reconcile classical and modern paradigms of soil organic matter
+      
+        Steven Hall
+        https://orcid.org/0000-0002-7841-2019
+        Principal Investigator
+      
+      NSF DEB 1802745
+    
+    
+      soil biogeochemistry data
+      soil sample location, biogeochemistry, biomass
+      
+        Hall_Ye_etal_NEON_NMR_biogeo.csv
+        28200
+        0a9a61b40625ce406d1d48d8c1d9362b
+        
+          
+            1
+            \r\n
+            column
+            
+              ,
+              "
+            
+          
+        
+        
+          
+            https://pasta.lternet.edu/package/data/eml/edi/575/1/890ae8520d0a9c295037f5df6261bb63
+          
+        
+      
+      
+        
+          siteID
+          Four letter NEON site code. Upper-case letters denote NEON sites; lower case letters denote additional soils collected for this study
+          string
+          
+            
+              
+                
+                  Four letter NEON site code. Upper-case letters denote NEON sites; lower case letters denote additional soils collected for this study
+                
+              
+            
+          
+        
+        
+          Latitude_degrees
+          Latitude
+          float
+          
+            
+              
+                degree
+              
+              
+                real
+                
+                  17.97
+                  68.66
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Longitude_degrees
+          Longitude
+          float
+          
+            
+              
+                degree
+              
+              
+                real
+                
+                  -149.37
+                  -65.79
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Soil_order
+          Soil order in the USDA taxonomy
+          string
+          
+            
+              
+                
+                  Soil order in the USDA taxonomy
+                
+              
+            
+          
+        
+        
+          Soil_greatgroup
+          Soil great group in the USDA taxonomy
+          string
+          
+            
+              
+                
+                  Soil great group in the USDA taxonomy
+                
+              
+            
+          
+        
+        
+          NLCD_class
+          National Land Cover Database classification
+          string
+          
+            
+              
+                
+                  National Land Cover Database classification
+                
+              
+            
+          
+        
+        
+          forest_vs_non
+          Binary variable indicating forested or non-forested ecosystems
+          string
+          
+            
+              
+                
+                  
+                    1
+                    forest
+                  
+                  
+                    0
+                    no forest
+                  
+                
+              
+            
+          
+        
+        
+          Grazing_present
+          Binary variable indicating presence or absence of anthropogenically managed grazing
+          string
+          
+            
+              
+                
+                  
+                    0
+                    no grazing
+                  
+                  
+                    1
+                    grazing
+                  
+                
+              
+            
+          
+        
+        
+          Prescribed_fire
+          Binary variable indicating presence or absence of prescribed fire
+          string
+          
+            
+              
+                
+                  
+                    0
+                    no prescribed fire
+                  
+                  
+                    1
+                    prescribed fire
+                  
+                
+              
+            
+          
+        
+        
+          horizonName
+          Soil horizon abbreviation in USDA taxonomy
+          string
+          
+            
+              
+                
+                  Soil horizon abbreviation in USDA taxonomy
+                
+              
+            
+          
+        
+        
+          carbonTot_g_kg
+          Total carbon
+          float
+          
+            
+              
+                gramsPerKilogram
+              
+              
+                real
+                
+                  2.3
+                  191.5
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          nitrogenTot_g_kg
+          Total nitrogen
+          float
+          
+            
+              
+                gramsPerKilogram
+              
+              
+                real
+                
+                  0.1
+                  9.5
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          estimatedOC_g_kg
+          Estimated organic carbon
+          float
+          
+            
+              
+                gramsPerKilogram
+              
+              
+                real
+                
+                  2
+                  192
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          OC_N_ratio
+          Organic carbon to nitrogen mass ratio
+          float
+          
+            
+              
+                gramsPerKilogram
+              
+              
+                real
+                
+                  7.14
+                  50
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          carbon_after_HF_g_kg
+          Carbon after HF treatment
+          float
+          
+            
+              
+                gramsPerKilogram
+              
+              
+                real
+                
+                  11.8
+                  512.82
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Nitrogen_after_HF_g_kg
+          Nitrogen after HF treatment
+          float
+          
+            
+              
+                gramsPerKilogram
+              
+              
+                real
+                
+                  1.34
+                  32.36
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          DithioniteFe_g_kg
+          Iron extracted by sodium dithionite
+          float
+          
+            
+              
+                gramsPerKilogram
+              
+              
+                real
+                
+                  0.12
+                  50.81
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          OxalateFe_g_kg
+          Iron extracted by ammonium oxalate, measured colorimetrically
+          float
+          
+            
+              
+                gramsPerKilogram
+              
+              
+                real
+                
+                  0.08
+                  15.06
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Oxalate_Al_mg_g_ICP
+          Aluminum extracted by ammonium oxalate, measured by ICP
+          float
+          
+            
+              
+                milligramsPerGram
+              
+              
+                real
+                
+                  0.31
+                  15
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Oxalate_Fe_mg_g_ICP
+          Iron extracted by ammonium oxalate, measured by ICP
+          float
+          
+            
+              
+                milligramsPerGram
+              
+              
+                real
+                
+                  0.07
+                  17.04
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Ca_Na2SO4_mg_g
+          Calcium extracted by sodium sulfate following water
+          float
+          
+            
+              
+                milligramsPerGram
+              
+              
+                real
+                
+                  0.01
+                  11.03
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Mg_Na2SO4_mg_g
+          Magnesium extracted by sodium sulfate following water
+          float
+          
+            
+              
+                milligramsPerGram
+              
+              
+                real
+                
+                  0.01
+                  2.24
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Ca_Na2SO4_umol_g
+          Calcium extracted by sodium sulfate following water
+          float
+          
+            
+              
+                micromolesPerGram
+              
+              
+                real
+                
+                  0.249376559
+                  275.0623441
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Mg_Na2SO4_umol_g
+          Magnesium extracted by sodium sulfate following water
+          float
+          
+            
+              
+                micromolesPerGram
+              
+              
+                real
+                
+                  0.411522634
+                  92.18106996
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Ca_plus_Mg_umol_g
+          Sum of calcium and magnesium extracted by sodium sulfate following water
+          float
+          
+            
+              
+                micromolesPerGram
+              
+              
+                real
+                
+                  0.660899192
+                  300.1652248
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          phCacl2
+          Soil pH measured in CaCl2
+          float
+          
+            
+              
+                dimensionless
+              
+              
+                real
+                
+                  3.6
+                  7.7
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          phH2o
+          Soil pH measured in water
+          float
+          
+            
+              
+                dimensionless
+              
+              
+                real
+                
+                  4.08
+                  8.1
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Carbohydrate_fraction
+          Fraction of C in carbohydrate
+          float
+          
+            
+              
+                dimensionless
+              
+              
+                real
+                
+                  0.093
+                  0.344
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Protein_fraction
+          Fraction of C in protein
+          float
+          
+            
+              
+                dimensionless
+              
+              
+                real
+                
+                  0
+                  0.456
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Lignin_fraction
+          Fraction of C in lignin
+          float
+          
+            
+              
+                dimensionless
+              
+              
+                real
+                
+                  0
+                  0.334
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Lipid_fraction
+          Fraction of C in lipid
+          float
+          
+            
+              
+                dimensionless
+              
+              
+                real
+                
+                  0.061
+                  0.591
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Carbonyl_fraction
+          Fraction of C in carbonyl
+          float
+          
+            
+              
+                dimensionless
+              
+              
+                real
+                
+                  0
+                  0.093
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Char_fraction
+          Fraction of C in char
+          float
+          
+            
+              
+                dimensionless
+              
+              
+                real
+                
+                  0.063
+                  0.379
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Carbohydrate_mg_g
+          Carbohydrate C
+          float
+          
+            
+              
+                milligramsPerGram
+              
+              
+                real
+                
+                  0.39
+                  44.83
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Protein_mg_g
+          Protein C
+          float
+          
+            
+              
+                milligramsPerGram
+              
+              
+                real
+                
+                  0
+                  17.67
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Lignin_mg_g
+          Lignin C
+          float
+          
+            
+              
+                milligramsPerGram
+              
+              
+                real
+                
+                  0
+                  62.33
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Lipid_mg_g
+          Lipid C
+          float
+          
+            
+              
+                milligramsPerGram
+              
+              
+                real
+                
+                  0.17
+                  40.19
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Carbonyl_mg_g
+          Carbonyl C
+          float
+          
+            
+              
+                milligramsPerGram
+              
+              
+                real
+                
+                  0
+                  12.05
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Char_mg_g
+          Char C
+          float
+          
+            
+              
+                milligramsPerGram
+              
+              
+                real
+                
+                  0.37
+                  31.31
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Alkyl_fraction
+          Fraction alkyl C
+          float
+          
+            
+              
+                dimensionless
+              
+              
+                real
+                
+                  0.142
+                  0.477
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          N_Alkyl_Methoxyl_fraction
+          Fraction N alkyl or methoxyl C
+          float
+          
+            
+              
+                dimensionless
+              
+              
+                real
+                
+                  0.046
+                  0.107
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          O_Alkyl_fraction
+          Fraction O alkyl C
+          float
+          
+            
+              
+                dimensionless
+              
+              
+                real
+                
+                  0.127
+                  0.333
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Di_O_Alkyl_fraction
+          Fraction di O alkyl C
+          float
+          
+            
+              
+                dimensionless
+              
+              
+                real
+                
+                  0.04
+                  0.088
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Aromatic_fraction
+          Fraction aromatic C
+          float
+          
+            
+              
+                dimensionless
+              
+              
+                real
+                
+                  0.115
+                  0.333
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Phenolic_fraction
+          Fraction phenolic C
+          float
+          
+            
+              
+                dimensionless
+              
+              
+                real
+                
+                  0.039
+                  0.109
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Amide_Carboxyl_fraction
+          Fraction amide or carboxyl C
+          float
+          
+            
+              
+                dimensionless
+              
+              
+                real
+                
+                  0.082
+                  0.181
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Alkyl_mg_g
+          Alkyl C
+          float
+          
+            
+              
+                milligramsPerGram
+              
+              
+                real
+                
+                  0.47
+                  34.15
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          N-Alkyl/Methoxyl_mg_g
+          N alkyl or methoxyl C
+          float
+          
+            
+              
+                milligramsPerGram
+              
+              
+                real
+                
+                  0.21
+                  13.19
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          O-Alkyl_mg_g
+          O alkyl C
+          float
+          
+            
+              
+                milligramsPerGram
+              
+              
+                real
+                
+                  0.39
+                  48.4
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Di-O-Alkyl_mg_g
+          Di O alkyl C
+          float
+          
+            
+              
+                milligramsPerGram
+              
+              
+                real
+                
+                  0.08
+                  15.65
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Aromatic_mg_g
+          Aromatic C
+          float
+          
+            
+              
+                milligramsPerGram
+              
+              
+                real
+                
+                  0.39
+                  43.69
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Phenolic_mg_g
+          Phenolic C
+          float
+          
+            
+              
+                milligramsPerGram
+              
+              
+                real
+                
+                  0.12
+                  16.76
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Amide_Carboxyl_mg_g
+          Amide or carboxyl C
+          float
+          
+            
+              
+                milligramsPerGram
+              
+              
+                real
+                
+                  0.34
+                  21.5
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          MAP_mm
+          Mean annual precipitation
+          float
+          
+            
+              
+                millimeter
+              
+              
+                real
+                
+                  262
+                  4500
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          MAT_C
+          Mean annual temperature
+          float
+          
+            
+              
+                celsius
+              
+              
+                real
+                
+                  -9
+                  25
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Elevation_m
+          Elevation
+          float
+          
+            
+              
+                meter
+              
+              
+                natural
+                
+                  10
+                  3513
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          sandTotal_percent
+          Sand content
+          float
+          
+            
+              
+                percent
+              
+              
+                real
+                
+                  5.3
+                  97
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          siltTotal_percent
+          Silt content
+          float
+          
+            
+              
+                percent
+              
+              
+                real
+                
+                  2
+                  63
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          clayTotal_percent
+          Clay content
+          float
+          
+            
+              
+                percent
+              
+              
+                real
+                
+                  0.7
+                  61
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Potential_Evapotranspiration_mm
+          Potential evapotranspiration
+          float
+          
+            
+              
+                millimeter
+              
+              
+                natural
+                
+                  363
+                  2341
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          Actual_Evapotranspiration_mm
+          Actual evapotranspiration
+          float
+          
+            
+              
+                millimeter
+              
+              
+                natural
+                
+                  100
+                  1589
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          MAP_minus_PET_mm
+          Mean annual precipitation minus potential evapotranspiration
+          float
+          
+            
+              
+                millimeter
+              
+              
+                real
+                
+                  -2069.77
+                  2535
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          horizonTopDepth
+          Top depth of horizon
+          float
+          
+            
+              
+                centimeter
+              
+              
+                whole
+                
+                  0
+                  31
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          horizonBottomDepth
+          Bottom depth of horizon
+          float
+          
+            
+              
+                centimeter
+              
+              
+                natural
+                
+                  4
+                  50
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          soilSeries
+          Soil series name in USDA taxonomy
+          string
+          
+            
+              
+                
+                  Soil series name in USDA taxonomy
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          soilFamily
+          Soil family name in USDA taxonomy
+          string
+          
+            
+              
+                
+                  Soil family name in USDA taxonomy
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          bulkDensExclCoarseFrag
+          Bulk density
+          float
+          
+            
+              
+                gramsPerCubicCentimeter
+              
+              
+                real
+                
+                  0.39
+                  1.59
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          pitNamedLocation
+          NEON ID for pairing these data with other measurements available for the same sample
+          string
+          
+            
+              
+                
+                  NEON ID for pairing these data with other measurements available for the same sample
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          dead_root_lessthan_4mm_approx_mg_cm3
+          Fine dead root biomass
+          float
+          
+            
+              
+                milligramsPerCubicCentimeter
+              
+              
+                real
+                
+                  0
+                  1.848
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          live_root_lessthan_4mm_approx_mg_cm3
+          Fine live root biomass
+          float
+          
+            
+              
+                milligramsPerCubicCentimeter
+              
+              
+                real
+                
+                  0.477
+                  12.639
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          dead_total_roots_mg_cm3
+          Total dead root biomass
+          float
+          
+            
+              
+                milligramsPerCubicCentimeter
+              
+              
+                real
+                
+                  0
+                  3.199
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          live_total_roots_mg_cm3
+          Total live root biomass
+          float
+          
+            
+              
+                milligramsPerCubicCentimeter
+              
+              
+                real
+                
+                  0.587
+                  16.16
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          wgt_dead_root_lessthan_4mm_CN_ratio_0_30cm
+          Mass weighted C to N ratio of dead fine roots in 0 to 30 cm soil
+          float
+          
+            
+              
+                dimensionless
+              
+              
+                real
+                
+                  29.1
+                  183
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          wgt_live_root_lessthan_4mm_CN_ratio_0_30cm
+          Mass weighted C to N ratio of live fine roots in 0 to 30 cm soil
+          float
+          
+            
+              
+                dimensionless
+              
+              
+                real
+                
+                  23.4
+                  74.8
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          dead_root_lessthan_4mm_approx_g_m2_0_30cm
+          Mass of dead fine roots in 0 to 30 cm soil
+          float
+          
+            
+              
+                gramsPerSquareMeter
+              
+              
+                real
+                
+                  0
+                  554.32
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          live_root_lessthan_4mm_approx_g_m2_0_30cm
+          Mass of live fine roots in 0 to 30 cm soil
+          float
+          
+            
+              
+                gramsPerSquareMeter
+              
+              
+                natural
+                
+                  143
+                  3792
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          dead_total_root_g_m2_0_30cm
+          Mass of dead roots in 0 to 30 cm soil
+          float
+          
+            
+              
+                gramsPerSquareMeter
+              
+              
+                whole
+                
+                  0
+                  960
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          live_total_root_g_m2_0_30cm
+          Mass of live roots in 0 to 30 cm soil
+          float
+          
+            
+              
+                gramsPerSquareMeter
+              
+              
+                natural
+                
+                  176
+                  4848
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          alMjelm_mg_kg
+          Total aluminum
+          float
+          
+            
+              
+                milligramsPerKilogram
+              
+              
+                real
+                
+                  4034
+                  91764.6
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          caMjelm_mg_kg
+          Total calcium
+          float
+          
+            
+              
+                milligramsPerKilogram
+              
+              
+                real
+                
+                  149
+                  237292
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          feMjelm_mg_kg
+          Total iron
+          float
+          
+            
+              
+                milligramsPerKilogram
+              
+              
+                real
+                
+                  1248
+                  111888
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          kMjelm_mg_kg
+          Total potassium
+          float
+          
+            
+              
+                milligramsPerKilogram
+              
+              
+                real
+                
+                  135
+                  31448
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          mgMjelm_mg_kg
+          Total magnesium
+          float
+          
+            
+              
+                milligramsPerKilogram
+              
+              
+                real
+                
+                  86
+                  13222
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          mnMjelm_mg_kg
+          Total manganese
+          float
+          
+            
+              
+                milligramsPerKilogram
+              
+              
+                real
+                
+                  13
+                  1960
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          naMjelm_mg_kg
+          Total sodium
+          float
+          
+            
+              
+                milligramsPerKilogram
+              
+              
+                real
+                
+                  26
+                  23442
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          pMjelm_mg_kg
+          Total phosphorus
+          float
+          
+            
+              
+                milligramsPerKilogram
+              
+              
+                real
+                
+                  47
+                  1540
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          siMjelm_mg_kg
+          Total silicon
+          float
+          
+            
+              
+                milligramsPerKilogram
+              
+              
+                natural
+                
+                  79479
+                  412640
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          srMjelm_mg_kg
+          Total strontium
+          float
+          
+            
+              
+                milligramsPerKilogram
+              
+              
+                whole
+                
+                  0
+                  302
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          tiMjelm_mg_kg
+          Total titanium
+          float
+          
+            
+              
+                milligramsPerKilogram
+              
+              
+                natural
+                
+                  934
+                  21375
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          zrMjelm_mg_kg
+          Total zirconium
+          float
+          
+            
+              
+                milligramsPerKilogram
+              
+              
+                natural
+                
+                  19
+                  213
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          bacteria_and_archaea_meanCopyNumber_16S
+          Mean 16S gene copy number
+          float
+          
+            
+              
+                dimensionless
+              
+              
+                natural
+                
+                  11938
+                  112472
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          fungi_meanCopyNumber_ITS
+          Mean ITS gene copy number
+          float
+          
+            
+              
+                dimensionless
+              
+              
+                natural
+                
+                  5
+                  189
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          fung_bact_ratio
+          Ratio of ITS to 16S gene copy numbers
+          float
+          
+            
+              
+                dimensionless
+              
+              
+                real
+                
+                  0.000274358
+                  0.007393303
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          litter_carbonPercent
+          Litter carbon
+          float
+          
+            
+              
+                percent
+              
+              
+                real
+                
+                  45.238
+                  53.502
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          litter_nitrogenPercent
+          Litter nitrogen
+          float
+          
+            
+              
+                percent
+              
+              
+                real
+                
+                  0.429769017
+                  1.313034516
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          litter_CtoN
+          Litter carbon to nitrogen ratio
+          float
+          
+            
+              
+                dimensionless
+              
+              
+                real
+                
+                  39.073
+                  160.5552258
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          litter_ligninPercent
+          Litter lignin
+          float
+          
+            
+              
+                percent
+              
+              
+                real
+                
+                  12.58791372
+                  32.665
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          foliage_carbonPercent
+          Foliage carbon
+          float
+          
+            
+              
+                percent
+              
+              
+                real
+                
+                  39.955
+                  50.55805556
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          foliage_nitrogenPercent
+          Foliage nitrogen
+          float
+          
+            
+              
+                percent
+              
+              
+                real
+                
+                  0.958636364
+                  2.86
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          foliage_CtoN
+          Foliage carbon to nitrogen ratio
+          float
+          
+            
+              
+                dimensionless
+              
+              
+                real
+                
+                  15.90559441
+                  51.53324343
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          foliage_ligninPercent
+          Foliage lignin
+          float
+          
+            
+              
+                percent
+              
+              
+                real
+                
+                  3.482272727
+                  14.49
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          RC1
+          First rotated PCA component score of carbon molecule correlation matrix
+          float
+          
+            
+              
+                dimensionless
+              
+              
+                real
+                
+                  -2.644521641
+                  1.752135256
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          RC2
+          Second rotated PCA component score of carbon molecule correlation matrix
+          float
+          
+            
+              
+                dimensionless
+              
+              
+                real
+                
+                  -2.911273546
+                  2.21128713
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          RC3
+          Third rotated PCA component score of carbon molecule correlation matrix
+          float
+          
+            
+              
+                dimensionless
+              
+              
+                real
+                
+                  -3.831641038
+                  1.266195901
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+      
+      42
+    
+    
+      NMR spectra
+      NMR spectra
+      
+        NMR_spectra_long.csv
+        1290198
+        1a48d0219211dedace9db07d0c428c3b
+        
+          
+            1
+            \r\n
+            column
+            
+              ,
+              "
+            
+          
+        
+        
+          
+            https://pasta.lternet.edu/package/data/eml/edi/575/1/803e52fe39b099de3bc664b7535fc2f5
+          
+        
+      
+      
+        
+          chemical_shift_ppm
+          Chemical shift
+          float
+          
+            
+              
+                partsPerMillion
+              
+              
+                real
+                
+                  -206.292
+                  406.567
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+        
+          site
+          Four letter site code. Upper-case letters denote NEON sites; lower case letters denote additional soils collected for this study
+          string
+          
+            
+              
+                
+                  Four letter site code. Upper-case letters denote NEON sites; lower case letters denote additional soils collected for this study
+                
+              
+            
+          
+        
+        
+          signal_intensity
+          13C NMR signal intensity
+          float
+          
+            
+              
+                dimensionless
+              
+              
+                real
+                
+                  -8.48133
+                  100
+                
+              
+            
+          
+          
+            NA
+            not available
+          
+        
+      
+      52224
+    
+    
+      NEON_NMR_overview_1.R
+      Run this script first to explore NMR data
+      
+        NEON_NMR_overview_1.R
+        2904
+        110076e3bc1f704a6dbdaa518f5cc0f8
+        
+          
+            unknown
+          
+        
+        
+          
+            https://pasta.lternet.edu/package/data/eml/edi/575/1/7da00f2ef25c83fcca0ba0faf54b6674
+          
+        
+      
+      unknown
+    
+    
+      NEON_NMR_boxplots_fig1_and_figED4.R
+      Make Fig 1 and Extended Data Fig 4
+      
+        NEON_NMR_boxplots_fig1_and_figED4.R
+        4517
+        95c81ab2e9da5d074c0e6964e9da8ac6
+        
+          
+            unknown
+          
+        
+        
+          
+            https://pasta.lternet.edu/package/data/eml/edi/575/1/3bb7f8dcdcf27e7f4ef7a12aad37e5cf
+          
+        
+      
+      unknown
+    
+    
+      NEON_NMR_ordination_fig2.R
+      Make Fig 2
+      
+        NEON_NMR_ordination_fig2.R
+        1752
+        bff0c261a204de25ea4b1a2b5f4f8e79
+        
+          
+            unknown
+          
+        
+        
+          
+            https://pasta.lternet.edu/package/data/eml/edi/575/1/dc20c55044665b3fb771e83e17df1d49
+          
+        
+      
+      unknown
+    
+    
+      NEON_NMR_heatmap_fig3.R
+      Make Fig 3
+      
+        NEON_NMR_heatmap_fig3.R
+        5214
+        81a80c34c2c0c1de356d6ecc6095bf2c
+        
+          
+            unknown
+          
+        
+        
+          
+            https://pasta.lternet.edu/package/data/eml/edi/575/1/eb10d6a14fb8f3b1833ea291ae68cc37
+          
+        
+      
+      unknown
+    
+    
+      NEON_NMR_boxplot_figED2.R
+      Make Extended Data Fig 2
+      
+        NEON_NMR_boxplot_figED2.R
+        6284
+        c0904c7960358de5249cf51b1ddc27a0
+        
+          
+            unknown
+          
+        
+        
+          
+            https://pasta.lternet.edu/package/data/eml/edi/575/1/398eba8bf2143e30f34634b5f510fa93
+          
+        
+      
+      unknown
+    
+    
+      NEON_NMR_stats_RC1.R
+      Regression analysis of RC1
+      
+        NEON_NMR_stats_RC1.R
+        6362
+        09d7d0be9435ef0ca1b8f4a10f62c692
+        
+          
+            unknown
+          
+        
+        
+          
+            https://pasta.lternet.edu/package/data/eml/edi/575/1/de359dba43f497ea9d809a584530c226
+          
+        
+      
+      unknown
+    
+    
+      NEON_NMR_stats_RC2.R
+      Regression analysis of RC2
+      
+        NEON_NMR_stats_RC2.R
+        2056
+        03c0cc7be95ff1014f8160411c3a2ed8
+        
+          
+            unknown
+          
+        
+        
+          
+            https://pasta.lternet.edu/package/data/eml/edi/575/1/efced01ccdd2fa57b24c2b4140e6f560
+          
+        
+      
+      unknown
+    
+    
+      NEON_NMR_stats_RC3.R
+      Regression analysis of RC3
+      
+        NEON_NMR_stats_RC3.R
+        2497
+        f50f60acc3ef6cfcdf125472ed9232d0
+        
+          
+            unknown
+          
+        
+        
+          
+            https://pasta.lternet.edu/package/data/eml/edi/575/1/90c1e029f36eb1e6fda6e44e8bc0d2ca
+          
+        
+      
+      unknown
+    
+    
+      NEON_NMR_SEM.R
+      Structural equation models of RCs
+      
+        NEON_NMR_SEM.R
+        5480
+        0aa99a895f940b27bca480332812089a
+        
+          
+            unknown
+          
+        
+        
+          
+            https://pasta.lternet.edu/package/data/eml/edi/575/1/f39665be90464b114356b00b3cf0380d
+          
+        
+      
+      unknown
+    
+    
+      NEON_NMR_map_figED1.R
+      Map of sampling locations (Extended Data Fig 1)
+      
+        NEON_NMR_map_figED1.R
+        1923
+        841fc9601c076b103502c24bbc5d84b7
+        
+          
+            unknown
+          
+        
+        
+          
+            https://pasta.lternet.edu/package/data/eml/edi/575/1/3bf4e4abb1a141cfe0cf96239e527627
+          
+        
+      
+      unknown
+    
+    
+      NEON_NMR_heatmap_figED5.R
+      Make Extended Data Fig 5
+      
+        NEON_NMR_heatmap_figED5.R
+        5263
+        409c554ca731de6c7a0f19702a3d8a64
+        
+          
+            unknown
+          
+        
+        
+          
+            https://pasta.lternet.edu/package/data/eml/edi/575/1/2cb16924fbcce4e818d41383c98e45c1
+          
+        
+      
+      unknown
+    
+    
+      NEON_NMR_heatmap_figED8.R
+      Make Extended Data Fig 8
+      
+        NEON_NMR_heatmap_figED8.R
+        6377
+        b217456815cb7503caf36c9ff5c69206
+        
+          
+            unknown
+          
+        
+        
+          
+            https://pasta.lternet.edu/package/data/eml/edi/575/1/b07b97b0aaadc8866d5945823ddc1018
+          
+        
+      
+      unknown
+    
+  
+  
+    
+      
+        
+          
+        
+        
+          
+        
+        
+          
+        
+        
+          
+        
+        
+          
+        
+        
+          
+        
+        
+          
+        
+      
+    
+  
