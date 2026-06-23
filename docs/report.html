@@ -2,14 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.31">
+<meta name="generator" content="quarto-1.9.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="姜宇洋">
 <meta name="author" content="岳诗文">
 <meta name="author" content="吕智彤">
-<meta name="dcterms.date" content="2026-05-12">
+<meta name="dcterms.date" content="2026-06-23">
 
 <title>Molecular trade-offs in soil organic carbon composition at continental scale论文数据复现报告</title>
 <style>
@@ -72,10 +72,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="report_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="report_files/libs/quarto-html/anchor.min.js"></script>
 <link href="report_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="report_files/libs/quarto-html/quarto-syntax-highlighting-7c69b197886ae2a34062761d21e44731.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="report_files/libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="report_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="report_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="report_files/libs/bootstrap/bootstrap-efbb37e9afcc02144ebbc7afd12a776f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="report_files/libs/bootstrap/bootstrap-23a1467e920da3a7930225a4b4621516.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -107,7 +107,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">May 12, 2026</p>
+      <p class="date">June 23, 2026</p>
     </div>
   </div>
   
@@ -126,31 +126,33 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sessionInfo</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>R version 4.5.3 (2026-03-11 ucrt)
-Platform: x86_64-w64-mingw32/x64
-Running under: Windows 11 x64 (build 26200)
+<pre><code>R version 4.4.2 (2024-10-31)
+Platform: x86_64-pc-linux-gnu
+Running under: Ubuntu 24.04.4 LTS
 
 Matrix products: default
-  LAPACK version 3.12.1
+BLAS:   /usr/lib/x86_64-linux-gnu/openblas-pthread/libblas.so.3 
+LAPACK: /usr/lib/x86_64-linux-gnu/openblas-pthread/libopenblasp-r0.3.26.so;  LAPACK version 3.12.0
 
 locale:
-[1] LC_COLLATE=Chinese (Simplified)_China.utf8 
-[2] LC_CTYPE=Chinese (Simplified)_China.utf8   
-[3] LC_MONETARY=Chinese (Simplified)_China.utf8
-[4] LC_NUMERIC=C                               
-[5] LC_TIME=Chinese (Simplified)_China.utf8    
+ [1] LC_CTYPE=en_US.UTF-8       LC_NUMERIC=C              
+ [3] LC_TIME=en_US.UTF-8        LC_COLLATE=en_US.UTF-8    
+ [5] LC_MONETARY=en_US.UTF-8    LC_MESSAGES=en_US.UTF-8   
+ [7] LC_PAPER=en_US.UTF-8       LC_NAME=C                 
+ [9] LC_ADDRESS=C               LC_TELEPHONE=C            
+[11] LC_MEASUREMENT=en_US.UTF-8 LC_IDENTIFICATION=C       
 
 time zone: Asia/Shanghai
-tzcode source: internal
+tzcode source: system (glibc)
 
 attached base packages:
 [1] stats     graphics  grDevices utils     datasets  methods   base     
 
 loaded via a namespace (and not attached):
- [1] htmlwidgets_1.6.4 compiler_4.5.3    fastmap_1.2.0     cli_3.6.5        
- [5] tools_4.5.3       htmltools_0.5.8.1 rstudioapi_0.17.1 yaml_2.3.10      
- [9] rmarkdown_2.30    knitr_1.50        jsonlite_2.0.0    xfun_0.54        
-[13] digest_0.6.38     rlang_1.1.7       evaluate_1.0.5   </code></pre>
+ [1] htmlwidgets_1.6.4 compiler_4.4.2    fastmap_1.2.0     tools_4.4.2      
+ [5] htmltools_0.5.8.1 yaml_2.3.12       rmarkdown_2.31    knitr_1.51       
+ [9] jsonlite_2.0.0    xfun_0.52         digest_0.6.39     rlang_1.2.0      
+[13] evaluate_1.0.4   </code></pre>
 </div>
 </div>
 <ol start="3" type="1">
