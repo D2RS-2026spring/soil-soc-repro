@@ -18,11 +18,6 @@ figure img { max-width: 100%; height: auto; }
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
-library(here)
-library(ggplot2)
-library(multcomp)
-library(gridExtra)
-library(cowplot)
 ```
 
 ## 项目概述
@@ -43,112 +38,338 @@ library(cowplot)
 sessionInfo()
 ```
 
+## 数据加载与预处理
+
+```{r data_load}
+# 加载所需包
+library(psych)
+library(ggplot2)
+library(multcomp)
+library(gridExtra)
+library(cowplot)
+library(dplyr)
+library(tidyr)
+library(viridis)
+
+# 加载 NMR 数据
+data <- read.csv("../data/raw/Hall_Ye_etal_NEON_NMR_biogeo.csv", header = TRUE)
+
+# 构建碳分子丰度数据框
+mat1 <- data.frame(data[, c("Lignin_fraction", "Carbohydrate_fraction",
+                             "Lipid_fraction", "Protein_fraction",
+                             "Char_fraction", "Carbonyl_fraction")])
+row.names(mat1) <- data$siteID
+
+# 构建碳官能团数据框
+mat1_1 <- data.frame(data[, c("Alkyl_fraction", "N_Alkyl_Methoxyl_fraction",
+                               "O_Alkyl_fraction", "Di_O_Alkyl_fraction",
+                               "Aromatic_fraction", "Phenolic_fraction",
+                               "Amide_Carboxyl_fraction")])
+row.names(mat1_1) <- data$siteID
+
+# 旋转 PCA 分析
+mat2.3 <- principal(mat1, nfactors = 3, rotate = 'varimax', covar = FALSE)
+
+# 提取主成分得分
+data1 <- cbind(data, mat2.3$scores)
+```
+
 ## 图 1：土壤有机碳组分箱线图
 
-使用 ggplot2 绘制土壤有机碳官能团与分子类别的箱线图，展示不同碳组分的相对丰度分布。
-
-```{r fig1, fig.cap="土壤有机碳组分箱线图", fig.width=10, fig.height=6}
-# 加载数据
-data <- read.csv(here("data/raw/Hall_Ye_etal_NEON_NMR_biogeo.csv"), header = TRUE)
-
-# 准备碳组分数据
+```{r fig1, fig.cap="土壤有机碳组分箱线图", fig.width=6.25, fig.height=3.5}
+# 构建分子类别数据
 test <- c(data$Carbohydrate_fraction, data$Protein_fraction, data$Lignin_fraction,
           data$Lipid_fraction, data$Char_fraction, data$Carbonyl_fraction)
 
-trts <- c(rep("Carbohydrate", nrow(data)), rep("Protein", nrow(data)),
-          rep("Lignin", nrow(data)), rep("Lipid", nrow(data)),
-          rep("Char", nrow(data)), rep("Carbonyl", nrow(data)))
+trts <- c(rep("    Carbohydrate", 42), rep("Protein", 42), rep("Lignin", 42),
+          rep("Lipid", 42), rep("Char", 42), rep("Carbonyl", 42))
 trts <- as.factor(trts)
 SOM <- data.frame(test, trts)
 
-# 绘制箱线图
-p1 <- ggplot(SOM, aes(x = trts, y = test, fill = trts)) +
-  geom_boxplot(outlier.shape = NA) +
-  geom_jitter(width = 0.2, alpha = 0.5) +
-  scale_fill_brewer(palette = "Set2") +
-  labs(x = "Carbon Group", y = "Relative Abundance") +
-  theme_bw(base_size = 14) +
-  theme(legend.position = "none",
-        axis.text.x = element_text(angle = 45, hjust = 1))
+# 统计检验
+lm1 <- lm(test ~ trts, SOM)
+anova(lm1)
 
+# 排列因子水平
+SOM$trts <- factor(SOM$trts, levels = c("    Carbohydrate", "Lignin", "Lipid",
+                                         "Protein", "Char", "Carbonyl"))
+
+# 绘制分子类别箱线图
+plot_SOM <- ggplot(SOM, aes(trts, test)) +
+  geom_boxplot(outlier.shape = NA) +
+  geom_jitter(position = position_jitter(0.1), color = "grey50") +
+  theme_classic() +
+  scale_x_discrete("C molecule") +
+  scale_y_continuous("Fractional abundance") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# 构建官能团数据
+test1 <- c(data$Alkyl_fraction, data$N_Alkyl_Methoxyl_fraction,
+           data$O_Alkyl_fraction, data$Di_O_Alkyl_fraction,
+           data$Aromatic_fraction, data$Phenolic_fraction, data$Amide_Carboxyl_fraction)
+
+trts1 <- c(rep("Alkyl", 42), rep("N-Alkyl/Methoxyl", 42), rep("O-Alkyl", 42),
+           rep("Di-O-Alkyl", 42), rep("Aromatic", 42), rep("Phenolic", 42),
+           rep("Amide/Carboxyl", 42))
+
+SOM1 <- data.frame(test1, trts1)
+SOM1$trts1 <- factor(SOM1$trts1, levels = c("O-Alkyl", "Alkyl", "Aromatic",
+                                              "Amide/Carboxyl", "N-Alkyl/Methoxyl",
+                                              "Phenolic", "Di-O-Alkyl"))
+
+# 绘制官能团箱线图
+plot_SOM_comp <- ggplot(SOM1, aes(trts1, test1)) +
+  geom_boxplot(outlier.shape = NA) +
+  geom_jitter(position = position_jitter(0.1), color = "grey50") +
+  theme_classic() +
+  scale_x_discrete("C functional group") +
+  scale_y_continuous("Fractional abundance") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# 组合图1
+p1 <- plot_grid(plot_SOM_comp, plot_SOM, nrow = 1, labels = c("a", "b"))
 print(p1)
 ```
 
 ## 图 2：PCA 排序图
 
-使用主成分分析展示土壤碳组分与主成分的关系。
+```{r fig2, fig.cap="土壤有机碳分子 PCA 排序图", fig.width=12, fig.height=4}
+# 重命名列
+colnames(mat1) <- c("Lignin", "Carbohyd", "Lipid", "Protein", "Char", "Carbonyl")
 
-```{r fig2, fig.cap="土壤有机碳分子 PCA 排序图", fig.width=8, fig.height=8}
-# 准备 PCA 数据
-pca_data <- data[, c("Carbohydrate_fraction", "Protein_fraction", "Lignin_fraction",
-                      "Lipid_fraction", "Char_fraction", "Carbonyl_fraction")]
+# 旋转 PCA
+mat2.3 <- principal(mat1, nfactors = 3, rotate = 'varimax', covar = FALSE)
 
-# 执行 PCA
-pca_result <- prcomp(pca_data, scale. = TRUE)
+# 绘制三组 biplot
+par(mfrow = c(1, 3), mar = c(3, 3, 1.5, 1.5), tck = -0.02, mgp = c(1.5, 0.25, 0), cex = 1.2)
 
-# 绘制 PCA 双图
-biplot(pca_result, main = "PCA Biplot of Soil Organic Carbon Components",
-       cex = 0.8, col = c("black", "red"))
+biplot(mat2.3, choose = c(1, 2),
+       xlim.s = c(-3, 3), ylim.s = c(-3, 3),
+       xlim.f = c(-1.15, 1.15), ylim.f = c(-1.15, 1.15),
+       pch = 20, col = c(rgb(0, 0, 0, max = 255, alpha = 75), "darkgreen"))
+mtext("a", font = 2, at = c(-1.5), cex = 1.3, line = 0.5)
+
+biplot(mat2.3, choose = c(2, 3),
+       xlim.s = c(-3, 3), ylim.s = c(-3, 3),
+       xlim.f = c(-1.15, 1.15), ylim.f = c(-1.15, 1.15),
+       pch = 20, col = c(rgb(0, 0, 0, max = 255, alpha = 75), "darkgreen"))
+mtext("b", font = 2, at = c(-1.5), cex = 1.3, line = 0.5)
+
+biplot(mat2.3, choose = c(1, 3),
+       xlim.s = c(-3, 3), ylim.s = c(-3, 3),
+       xlim.f = c(-1.15, 1.15), ylim.f = c(-1.15, 1.15),
+       pch = 20, col = c(rgb(0, 0, 0, max = 255, alpha = 75), "darkgreen"))
+mtext("c", font = 2, at = c(-1.5), cex = 1.3, line = 0.5)
 ```
 
 ## 扩展数据图 ED2：环境因子分布箱线图
 
-使用 ggplot2 绘制关键环境变量的分布。
+```{r fig_ed2, fig.cap="环境因子分布箱线图", fig.width=8, fig.height=8}
+# 计算结晶铁
+data1$Fe_crystalline <- data1$DithioniteFe_g_kg - data1$OxalateFe_g_kg
+data1$Fe_crystalline_log10 <- log10(data1$Fe_crystalline)
 
-```{r fig_ed2, fig.cap="环境因子分布箱线图", fig.width=12, fig.height=8}
-# 选择环境因子列（使用实际存在的列名）
-env_cols <- c("phH2o", "carbonTot_g_kg", "nitrogenTot_g_kg", "OC_N_ratio",
-              "sandTotal_percent", "siltTotal_percent", "clayTotal_percent",
-              "MAP_mm", "MAT_C")
+# 选择环境因子子集
+datared <- data1[, c("siteID", "Oxalate_Fe_mg_g_ICP", "Oxalate_Al_mg_g_ICP",
+                      "Fe_crystalline", "phH2o", "Ca_plus_Mg_umol_g",
+                      "live_root_lessthan_4mm_approx_mg_cm3",
+                      "wgt_live_root_lessthan_4mm_CN_ratio_0_30cm",
+                      "MAP_minus_PET_mm", "MAT_C",
+                      "fungi_meanCopyNumber_ITS",
+                      "bacteria_and_archaea_meanCopyNumber_16S",
+                      "fung_bact_ratio", "clayTotal_percent",
+                      "estimatedOC_g_kg", "OC_N_ratio", "nitrogenTot_g_kg",
+                      "foliage_ligninPercent", "foliage_CtoN",
+                      "litter_ligninPercent", "litter_CtoN")]
+
+# 重命名列
+names(datared) <- c("Site", "Alo (mg g-1)", "Feo (mg g-1)", "Fed-o (mg g-1)",
+                     "pH", "Ca (mg g-1)", "Fine roots (mg cm-3)", "Fine root C:N",
+                     "MAP-PET (mm)", "MAT (C)", "ITS", "16S", "ITS:16S",
+                     "Clay (%)", "SOC (mg g-1)", "SOC:N", "Soil N (mg g-1)",
+                     "Foliar lignin (%)", "Foliar C:N", "Litter lignin (%)", "Litter C:N")
 
 # 转换为长格式
-env_data <- data[, env_cols]
-env_long <- reshape(env_data, direction = "long",
-                    varying = names(env_data),
-                    v.names = "Value", timevar = "Variable",
-                    times = names(env_data))
+datared_melt <- datared %>%
+  pivot_longer(cols = -Site, names_to = "variable", values_to = "value")
 
-# 绘制分面箱线图
-p2 <- ggplot(env_long, aes(x = Variable, y = Value)) +
-  geom_boxplot(fill = "steelblue", alpha = 0.7) +
-  facet_wrap(~Variable, scales = "free", ncol = 3) +
-  theme_bw(base_size = 12) +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1),
-        strip.text = element_text(face = "bold"))
+# 设置排序
+datared_melt$ordering <- as.character(datared_melt$variable)
+datared_melt$ordering[datared_melt$ordering == "MAT (C)"] <- 1
+datared_melt$ordering[datared_melt$ordering == "MAP-PET (mm)"] <- 2
+datared_melt$ordering[datared_melt$ordering == "pH"] <- 3
+datared_melt$ordering[datared_melt$ordering == "SOC (mg g-1)"] <- 4
+datared_melt$ordering[datared_melt$ordering == "Soil N (mg g-1)"] <- 5
+datared_melt$ordering[datared_melt$ordering == "SOC:N"] <- 6
+datared_melt$ordering[datared_melt$ordering == "Fine roots (mg cm-3)"] <- 7
+datared_melt$ordering[datared_melt$ordering == "Fine root C:N"] <- 8
+datared_melt$ordering[datared_melt$ordering == "Foliar C:N"] <- 9
+datared_melt$ordering[datared_melt$ordering == "Litter C:N"] <- 10
+datared_melt$ordering[datared_melt$ordering == "Foliar lignin (%)"] <- 11
+datared_melt$ordering[datared_melt$ordering == "Litter lignin (%)"] <- 12
+datared_melt$ordering[datared_melt$ordering == "Ca (mg g-1)"] <- 13
+datared_melt$ordering[datared_melt$ordering == "Alo (mg g-1)"] <- 14
+datared_melt$ordering[datared_melt$ordering == "Feo (mg g-1)"] <- 15
+datared_melt$ordering[datared_melt$ordering == "Fed-o (mg g-1)"] <- 16
+datared_melt$ordering[datared_melt$ordering == "Clay (%)"] <- 17
+datared_melt$ordering[datared_melt$ordering == "16S"] <- 18
+datared_melt$ordering[datared_melt$ordering == "ITS"] <- 19
+datared_melt$ordering[datared_melt$ordering == "ITS:16S"] <- 20
 
-print(p2)
+datared_melt$ordering <- as.numeric(datared_melt$ordering)
+datared_melt <- datared_melt[order(datared_melt$ordering), ]
+
+# 设置因子水平
+datared_melt$variable <- factor(datared_melt$variable,
+                                 levels = c("MAT (C)", "MAP-PET (mm)", "pH",
+                                            "SOC (mg g-1)", "Soil N (mg g-1)", "SOC:N",
+                                            "Fine roots (mg cm-3)", "Fine root C:N",
+                                            "Foliar C:N", "Litter C:N",
+                                            "Foliar lignin (%)", "Litter lignin (%)",
+                                            "Ca (mg g-1)", "Alo (mg g-1)", "Feo (mg g-1)",
+                                            "Fed-o (mg g-1)", "Clay (%)", "16S", "ITS", "ITS:16S"))
+
+# 定义面板标签
+panel_names <- c(
+  "MAT (C)" = "MAT*~(degree*C)",
+  "MAP-PET (mm)" = "MAP-PET*~(mm)",
+  "pH" = "pH",
+  "SOC (mg g-1)" = "SOC*~(mg*~g^-1)",
+  "Soil N (mg g-1)" = "SON*~(mg*~g^-1)",
+  "SOC:N" = "SOC:N",
+  "Fine roots (mg cm-3)" = "Fine*~roots*~(mg*~cm^-3)",
+  "Fine root C:N" = "Fine*~root*~C:N",
+  "Foliar C:N" = "Foliar*~C:N",
+  "Litter C:N" = "Litter*~C:N",
+  "Foliar lignin (%)" = "Foliar*~lignin*~('%')",
+  "Litter lignin (%)" = "Litter*~lignin*~('%')",
+  "Ca (mg g-1)" = "Ca*~+Mg*~(mu*mol*~g^-1)",
+  "Alo (mg g-1)" = "Al[o]*~(mg*~g^-1)",
+  "Feo (mg g-1)" = "Fe[o]*~(mg*~g^-1)",
+  "Fed-o (mg g-1)" = "Fe[d-o]*~(mg*~g^-1)",
+  "Clay (%)" = "Clay*~('%')",
+  "16S" = "16*S",
+  "ITS" = "ITS",
+  "ITS:16S" = "ITS*':'*16*S"
+)
+
+# 绘制 ED2
+print(ggplot(datared_melt, aes(1, value)) +
+  geom_boxplot(outlier.shape = NA) +
+  geom_jitter(position = position_jitter(0.1), color = "grey50") +
+  facet_wrap(~variable, scales = "free_y",
+             labeller = labeller(variable = as_labeller(panel_names, label_parsed))) +
+  theme_classic() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1)) +
+  scale_x_discrete("") +
+  scale_y_continuous(""))
 ```
 
 ## 扩展数据图 ED4：碳组分与环境因子关系图
 
-```{r fig_ed4, fig.cap="不同植被类型下的碳组分差异", fig.width=10, fig.height=6}
-# 绘制植被类型与碳组分关系图
-p3 <- ggplot(data, aes(x = NLCD_class, y = Carbohydrate_fraction, fill = NLCD_class)) +
-  geom_boxplot(outlier.shape = NA) +
-  geom_jitter(width = 0.2, alpha = 0.5) +
-  scale_fill_brewer(palette = "Set3") +
-  labs(x = "Vegetation Type", y = "Carbohydrate Fraction") +
-  theme_bw(base_size = 14) +
-  theme(legend.position = "none",
-        axis.text.x = element_text(angle = 45, hjust = 1))
+```{r fig_ed4, fig.cap="不同植被类型与火干扰下的碳组分差异", fig.width=4, fig.height=8}
+# 准备分组数据
+SOM2 <- data.frame(SOM, rep(data$forest_vs_non), rep(data$Prescribed_fire))
 
-print(p3)
+names(SOM2)[names(SOM2) == "rep.data.forest_vs_non."] <- "Vegetation"
+SOM2$Vegetation[SOM2$Vegetation == 0] <- "Other"
+SOM2$Vegetation[SOM2$Vegetation == 1] <- "Forest"
+SOM2$Vegetation <- factor(SOM2$Vegetation, levels = c("Forest", "Other"))
+
+names(SOM2)[names(SOM2) == "rep.data.Prescribed_fire."] <- "Fire"
+SOM2$Fire[SOM2$Fire == 0] <- "No"
+SOM2$Fire[SOM2$Fire == 1] <- "Yes"
+SOM2$Fire <- factor(SOM2$Fire, levels = c("No", "Yes"))
+
+# 绘制植被类型面板
+S4_a <- ggplot(SOM2, aes(trts, test, fill = Vegetation)) +
+  geom_boxplot(outlier.shape = NA) +
+  scale_fill_brewer(palette = "Pastel1") +
+  geom_point(position = position_jitterdodge(), alpha = 0.5) +
+  theme_classic() +
+  scale_x_discrete("C functional group") +
+  scale_y_continuous("Fractional abundance") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# 绘制火干扰面板
+S4_b <- ggplot(SOM2, aes(trts, test, fill = Fire)) +
+  geom_boxplot(outlier.shape = NA) +
+  scale_fill_brewer(palette = "Set2") +
+  geom_point(position = position_jitterdodge(), alpha = 0.5) +
+  theme_classic() +
+  scale_x_discrete("C functional group") +
+  scale_y_continuous("Fractional abundance") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# 组合 ED4
+pED4 <- plot_grid(S4_a, S4_b, nrow = 2, labels = c("a", "b"))
+print(pED4)
 ```
 
 ## 扩展数据图 ED5：有机碳分子组分相关性热图
 
-```{r fig_ed5, fig.cap="土壤有机碳分子组分相关性热图", fig.width=8, fig.height=8}
-# 选择碳组分列
-carbon_cols <- c("Carbohydrate_fraction", "Protein_fraction", "Lignin_fraction",
-                 "Lipid_fraction", "Char_fraction", "Carbonyl_fraction")
+```{r fig_ed5, fig.cap="土壤有机碳分子组分相关性热图", fig.width=6, fig.height=5}
+# 碳组分数据
+comps <- data1[, c("Carbohydrate_fraction", "Protein_fraction", "Lignin_fraction",
+                    "Lipid_fraction", "Char_fraction", "Carbonyl_fraction")]
+names(comps) <- c("Carbohydrate", "Protein", "Lignin", "Lipid", "Char", "Carbonyl")
 
 # 计算相关矩阵
-cor_matrix <- cor(data[, carbon_cols], use = "complete.obs")
+NMR_cor_vars <- as.matrix(cor(comps, use = "pairwise.complete.obs"))
+
+# 获取上三角
+get_upper_tri <- function(cormat) {
+  cormat[lower.tri(cormat)] <- NA
+  return(cormat)
+}
+
+# 重排序
+reorder_cormat <- function(cormat) {
+  dd <- as.dist((1 - cormat) / 2)
+  hc <- hclust(dd)
+  cormat <- cormat[hc$order, hc$order]
+}
+
+cormat <- reorder_cormat(NMR_cor_vars)
+cormat_upper <- get_upper_tri(cormat)
+
+# 将矩阵转换为长格式
+NMR_cormat_upper <- as.data.frame(cormat_upper) %>%
+  mutate(X1 = row.names(cormat_upper)) %>%
+  pivot_longer(cols = -X1, names_to = "X2", values_to = "r") %>%
+  filter(!is.na(r))
+
+# 设置因子水平
+NMR_cormat_upper$X2 <- factor(NMR_cormat_upper$X2,
+                               levels = c("Carbonyl", "Lignin", "Char", "Lipid", "Protein", "Carbohydrate"))
+NMR_cormat_upper$X1 <- factor(NMR_cormat_upper$X1,
+                               levels = c("Carbonyl", "Lignin", "Char", "Lipid", "Protein", "Carbohydrate"))
+
+# 计算相关系数矩阵
+r <- cor(comps, use = "pairwise.complete.obs")
+
+# 四舍五入相关系数
+NMR_cormat_upper$r <- round(NMR_cormat_upper$r, 2)
+NMR_cormat_upper$Corr <- NMR_cormat_upper$r
+NMR_cormat_upper$Corr[NMR_cormat_upper$Corr < 0] <- -1
+NMR_cormat_upper$Corr[NMR_cormat_upper$Corr > 0] <- 1
+NMR_cormat_upper$Corr[NMR_cormat_upper$Corr == 1] <- "black"
+NMR_cormat_upper$Corr[NMR_cormat_upper$Corr == -1] <- "white"
 
 # 绘制热图
-heatmap(cor_matrix, main = "Correlation Heatmap of Carbon Components",
-        col = colorRampPalette(c("blue", "white", "red"))(20),
-        scale = "none", margins = c(10, 10))
+plot_corr_map <- ggplot(data = NMR_cormat_upper) +
+  geom_tile(aes(x = X2, y = X1, fill = r)) +
+  scale_fill_viridis() +
+  scale_y_discrete("") +
+  scale_x_discrete("") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1, size = 14),
+        axis.title.x = element_blank(),
+        axis.text.y = element_text(size = 14)) +
+  geom_text(data = NMR_cormat_upper,
+            mapping = aes(x = X2, y = X1, label = r),
+            color = NMR_cormat_upper$Corr)
+
+print(plot_corr_map)
 ```
 
 ## 复现结论
